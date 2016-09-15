@@ -1,0 +1,14 @@
+.icon-menu {
+    min-width: 55px !important;
+    text-align: center !important;
+	left: -75px;
+    top: 1px;
+}
+
+.dec-none { 
+    text-decoration: none!important; /* Отменяем подчеркивание у ссылки */
+   } 
+
+.align-left{ 
+    text-align: left; /* Отменяем подчеркивание у ссылки */
+   } 

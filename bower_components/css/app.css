@@ -1,0 +1,138 @@
+
+.btn {
+    margin: 0px 5px;
+}
+
+.angular-ui-tree-handle {
+    /* background: #f8faff; */
+    /* border: 1px solid #dae2ea; */
+    color: #7c9eb2;
+    padding: 10px 10px;
+}
+
+.angular-ui-tree-handle:hover {
+    color: #438eb9;
+    background: #f4f6f7;
+    border-color: #dce2e8;
+}
+
+.angular-ui-tree-placeholder {
+    background: #f0f9ff;
+    border: 2px dashed #bed2db;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+tr.angular-ui-tree-empty {
+    height:100px
+}
+
+.group-title {
+    background-color: #687074 !important;
+    color: #FFF !important;
+}
+
+
+/* --- Tree --- */
+.tree-node {
+    border: 1px solid #e9e9e9;
+    background: #f9f9f9;
+    color: #848484;
+}
+
+.nodrop {
+    background-color: #f2dede;
+}
+
+.tree-node-content {
+    margin: 10px;
+}
+.tree-handle {
+    padding: 14px 1px 14px 1px;
+    /* background: #428bca; */
+    /* color: #FFF; */
+    margin: 3px 1px 3px 1px;
+    min-width: 3%;
+}
+
+.tree-handle-head {
+    padding: 10px;
+    padding-left: 5px;
+    /* background: #428bca; */
+    /* color: #FFF; */
+    margin: 3px;
+    margin-right: 5px;
+    min-width: 5%;
+}
+
+.tree-check {
+    padding: 14px 1px 14px 5px;
+    /* background: #428bca; */
+    /* color: #FFF; */
+    margin: 3px;
+    margin-right: 0px;
+    min-width: 3%;
+}
+
+.tree-check-first
+{
+    padding: 1px 1px 1px 5px;
+    /* background: #428bca; */
+    /* color: #FFF; */
+    margin: 3px;
+    margin-right: 0px;
+    min-width: 3%;
+}   
+
+.num-plus-collapse{
+    min-width: 3%;
+}
+
+.number-group{
+    min-width: 2px;
+}
+
+.tree-node-content > .button-plus{
+    min-width: 3%;
+    /* background-color: transparent;
+    border-color: transparent;
+    color: #86c042; */ 
+}
+
+.angular-ui-tree-handle:hover {
+}
+
+.angular-ui-tree-placeholder {
+    background: #f0f9ff;
+    border: 2px dashed #bed2db;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.margin-rl{
+margin-right: 8px;
+margin-left: 2px;
+}
+
+input.input-size{
+    min-width: 7%;
+    max-width: 20%;
+    display: inline-block;
+}
+
+ul>li>a.type-search {
+display: inline-block;
+cursor: pointer;
+padding: 7px 15px;
+}
+
+.block-type-search {
+    display: inline-block;
+    position: absolute;
+    padding: 1px 5px 1px 5px;
+}
+
+
+
