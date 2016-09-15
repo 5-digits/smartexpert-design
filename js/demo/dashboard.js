@@ -106,8 +106,20 @@ $(window).on('load', function() {
         }
     });
 
-        
 
+    // clonning button event
+    $(".save-on").click(function() {
+        $(".save-lock").css('display', 'block');
+    });
+
+    $(".run-on").click(function() {
+        $(".run-lock").css('display', 'block');
+    });
+
+    $(".delete").click(function() {
+        var n = $("#tree2-root input:checked").length;
+        $("#tree2-root input:checked").closest(".angular-ui-tree-node").remove();
+    });
 
     
     /*-- для показаскрытия/ инпута на написанных статьях --*/
