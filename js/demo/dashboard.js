@@ -7,7 +7,39 @@
 // - ThemeOn.net -
 
 
+$(document).ready(function() {
+
+
+    // CHOSEN
+    // =================================================================
+    // Require Chosen
+    // http://harvesthq.github.io/chosen/
+    // =================================================================
+    $('#demo-chosen-select').chosen();
+    $('#demo-cs-multiselect').chosen({width:'100%'});
+
+});
+
+
 $(window).on('load', function() {
+
+
+
+    // clonning button event
+    $(".save-on").click(function() {
+        $(".save-lock").css('display', 'block');
+        $(".run-lock").css('display', 'none');
+    });
+
+    $(".run-on").click(function() {
+        $(".run-lock").css('display', 'block');
+        $(".save-lock").css('display', 'none');
+    });
+
+    $(".delete").click(function() {
+        var n = $("#tree2-root input:checked").length;
+        $("#tree2-root input:checked").closest(".angular-ui-tree-node").remove();
+    });
 
 
     $(".mapping").click(function(){console.log("test");$(".tb_row1-2 td:first-child").css("padding-left","30px")})
@@ -106,20 +138,8 @@ $(window).on('load', function() {
         }
     });
 
+        
 
-    // clonning button event
-    $(".save-on").click(function() {
-        $(".save-lock").css('display', 'block');
-    });
-
-    $(".run-on").click(function() {
-        $(".run-lock").css('display', 'block');
-    });
-
-    $(".delete").click(function() {
-        var n = $("#tree2-root input:checked").length;
-        $("#tree2-root input:checked").closest(".angular-ui-tree-node").remove();
-    });
 
     
     /*-- для показаскрытия/ инпута на написанных статьях --*/
@@ -272,7 +292,7 @@ $(window).on('load', function() {
         {"elapsed": "Des-03", "value": 79, b: 24}
     ];
 
-    var chart = Morris.Area({
+    /* var chart = Morris.Area({
         element : 'morris-chart-network',
         data: day_data,
         axes:false,
@@ -291,7 +311,7 @@ $(window).on('load', function() {
         resize:true,
         behaveLikeLine : true,
         hideHover: 'auto'
-    });
+    }); */
 
 
 

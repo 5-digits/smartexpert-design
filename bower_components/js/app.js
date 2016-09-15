@@ -9,9 +9,9 @@
           controller: 'CloningCtrl',
           templateUrl: 'bower_components/views/cloning.html'
         })
-        .when('/basic-example', {
-          controller: 'BasicExampleCtrl',
-          templateUrl: 'bower_components/views/basic-example.html'
+        .when('/view_map_seo_text', {
+          controller: 'CloningCtrl',
+          templateUrl: 'bower_components/views/view_map_seo_text.html'
         })
         .when('/connected-trees', {
           controller: 'ConnectedTreesCtrl',
