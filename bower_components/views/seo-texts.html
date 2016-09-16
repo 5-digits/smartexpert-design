@@ -1,0 +1,324 @@
+<!--Form File Upload [ SAMPLE ]-->
+<script src="js/demo/form-file-upload.js"></script>
+
+<!-- Nested node template -->
+<script type="text/ng-template" id="nodes_renderer2.html">
+
+  <div class="tree-node">
+
+    <div class="pull-left tree-check" style="
+    min-width: 2%;
+">
+      <input class="item" type="checkbox">
+    </div>
+
+    <div class="pull-left tree-handle"  ui-tree-handle style="
+    min-width: 2%;
+"> 
+      <span class="glyphicon glyphicon-list"></span>
+    </div>
+
+    
+
+
+
+<div class="tree-node-content"> 
+
+    <span class="number-group">{{node.number_group}}</span>
+
+    <div class="dropdown" style="display: inline-block;width: 5%;">
+    <a class="btn btn-success btn-rounded-new" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)">
+      <span class="glyphicon"
+        ng-class="{
+          'glyphicon-chevron-right': collapsed,
+          'glyphicon-chevron-down': !collapsed
+        }">
+        </span>
+      </a> </div>
+    <!---->
+
+      <input type="hidden" ng-model="node.number_group" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+       <div style="
+    display: inline-block;
+    width: 12%;
+">
+                                                                        <span>
+                                                                           Группа: <b>Шестерни для делога</b>
+                                                                        </span>
+                                                                 </div>
+
+
+      <div class="dropdown" style="display: inline-block;width: 5%;"><a href="keyword_research_v1.html" style="
+    color: #337ab7;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: underline;">5 / 20</a></div>
+
+
+                                                                 <div style="
+    display: inline-block;
+    width: 14%;
+">
+                                                                        <span>
+                                                                           Статья: <b>Шестерни для Делонги в Киеве</b>
+                                                                        </span>
+                                                                 </div>
+
+                                                                 <div style="
+    display: inline-block;
+    width: 6%;
+">
+                                                                      <b class="warning">
+                                                                          В работе 
+                                                                      </b>
+                                                                 </div>
+
+                                                                 <div style="
+    display: inline-block;
+    width: 7%;
+">
+                                                                     25.05.2016
+                                                                 </div>
+
+
+
+                                                                 <div style="
+    display: inline-block;
+    width: 7%;
+">
+                                                                     <span>
+                                                                           Рыжков Дмитрий
+                                                                        </span>
+                                                                 </div>
+
+                                          <div class="dropdown" style="display: inline-block;width: 3%;">
+      <a class="showin btn btn-xs btn-primary btn-rounded-new" style="cursor: pointer;"><i class="fa fa-link"></i></a>
+      <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
+      </div>
+
+                                                                 <div style="
+    display: inline-block;
+    width: 3%;
+">
+                                                                      <button class="btn btn-xs btn-primary btn-rounded-new">
+                                                                         <a href="se-text-view-client.html" style="
+    color: #ecf6fe;
+">
+                                                                             <i class="fa fa-file-text-o"></i>
+                                                                         </a>
+                                                                     </button>
+                                                                 </div>
+
+
+                                                                <div style="
+    display: inline-block;
+    width: 3%;
+">
+                                                                      <button class="btn btn-xs btn-primary btn-rounded-new">
+                                                                        <a href="seo-texts-redact.html" style="
+    color: #ecf6fe;
+">
+                                                                            <i class="fa fa-pencil"></i>
+                                                                        </a>
+                                                                     </button>
+                                                                 </div>
+
+
+   <div class="text-center" data-col-seq="12" style="
+    display: inline-block;
+    width: 3%;
+"><a target="_blank" class="seo_text_link" href="https://text.ru/spelling/57da7679a171a" style="
+    color: #337ab7;
+    text-decoration: underline;
+">7</a></div>
+
+  <div class="text-center" data-col-seq="12" style="
+    display: inline-block;
+    width: 5%;
+"><a target="_blank" class="seo_text_link" href="https://text.ru/antiplagiat/57da7679a171a" style="
+    color: #337ab7;
+    text-decoration: underline;
+">100 %</a></div>
+
+<div class="dropdown" style="display: inline-block;width: 7%;">
+                                    <a title="12:08 02.09.2016" id="projectsTaskSelector" class="lang-selector dropdown-toggle btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                                      <span class="lang-selected">
+                                        <span class="text-mint">
+                                            <i class="fa fa-area-chart" style="font-size:25px;"></i>
+                                        </span>
+                                        <span class="lang-id"></span>
+                                        <span class="lang-name"></span>
+                                      </span>
+                                    </a>
+
+                                    <ul class="dropdown-menu icon-menu">
+                                        <li class="align-left" title="12:08 02.09.2016">
+                                          <a class="dec-none" target="_blank" href="/ru/get_project_report/6918_5090/www.od.service-market.com.ua">
+                                            <span class="text-info">
+                                              <i class="fa fa-link" style="font-size:20px;"></i> Отчет по ссылке
+                                            </span>
+                                            <span class="lang-id">web1079</span>
+                                          </a>
+                                        </li>
+                                        <li class="align-left" title="12:08 02.09.2016">
+                                          <a class="dec-none" target="_blank" href="/ru/get_project_pdf_report/6918_5090/www.od.service-market.com.ua/0-1">
+                                            <span class="text-danger">
+                                              <i class="fa fa-file-pdf-o" style="font-size:20px;"></i> Отчет в PDF
+                                            </span>
+                                            <span class="lang-id">pdf1079</span>
+                                          </a>
+                                        </li>
+
+                                        <li class="align-left">
+                                        <a class="dec-none" href="#" onclick="resetReportTask(1079);">
+                                          <span class="text-info">
+                                            <i class="fa fa-link" style="font-size:20px;"></i> КП по ссылке
+                                          </span>
+                                          <span class="lang-id">reload1079</span>
+                                        </a>
+                                      </li>
+
+                                      <li class="align-left">
+                                        <a class="dec-none" href="#" onclick="resetReportTask(1079);">
+                                          <span class="text-danger">
+                                            <i class="fa fa-file-pdf-o" style="font-size:20px;"></i> КП в PDF
+                                          </span>
+                                          <span class="lang-id">reload1079</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+
+        
+      <a class="pull-right btn btn-danger btn-rounded-new" data-nodrag="" ng-click="remove(this)">
+      <span class="glyphicon glyphicon-remove"></span></a>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+  <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+    <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer2.html'" data-expand-on-hover="true" data-collapsed="true">
+    </li>
+  </ol>
+
+</script>
+
+    <div class="row">
+
+        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+                <button class="btn btn-success btn-rounded-new" ng-click="expandAll()">Развернуть все</button>
+                <button class="btn btn-success btn-rounded-new" ng-click="collapseAll()">Свернуть все</button>
+
+        </div>
+
+      <!--  <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+
+                                <span class="btn btn-success fileinput-button btn-rounded-new dz-clickable">
+                                    <i class="fa fa-plus"></i>
+                                    <span>Загрузить карту сайта EXEL</span>
+                                </span>
+                    
+                                <div class="btn-group pull-right">
+                                    <button id="dz-upload-btn" class="btn btn-primary btn-rounded-new" type="submit" disabled>
+                                        <i class="fa fa-upload-cloud"></i> Upload
+                                    </button>
+                                    <button id="dz-remove-btn" class="btn btn-danger btn-rounded-new cancel" type="reset" disabled>
+                                        <i class="demo-pli-cross"></i>
+                                    </button>
+                                </div>
+                    
+                    
+                            <div id="dz-previews">
+                                <div id="dz-template" class="pad-top bord-top">
+                                    <div class="media">
+                                        <div class="media-body"> -->
+
+                                             <!--This is used as the file preview template-->
+                                          <!--  <div class="media-block">
+                                                <div class="media-left">
+                                                    <img class="dz-img" data-dz-thumbnail>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text-main text-bold mar-no text-overflow" data-dz-name></p>
+                                                    <span class="dz-error text-danger text-sm" data-dz-errormessage></span>
+                                                    <p class="text-sm" data-dz-size></p>
+                                                    <div id="dz-total-progress" style="opacity:0">
+                                                         <div class="progress progress-xs active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                                            <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media-right">
+                                            <button data-dz-remove class="btn btn-xs btn-danger dz-cancel"><i class="demo-pli-cross"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        </div>  -->
+
+    </div>   
+
+    <div class="col-sm-12">
+        <div class="angular-ui-tree">
+
+        <ol class="ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
+
+        <li class="angular-ui-tree-node">
+
+
+    <div class="pull-left tree-check-first">
+      <input class="check_all" type="checkbox">
+    </div>
+
+    <div class="pull-left tree-handle-head">
+    </div>
+
+
+      </li>
+
+      </ol>
+
+    </div>
+    </div>
+
+
+    <div class="col-sm-12">
+    <div ui-tree id="tree2-root" data-clone-enabled="true" data-max-depth="3">
+      <ol ui-tree-nodes="" ng-model="tree2">
+        <li ng-repeat="node in tree2" ui-tree-node ng-include="'nodes_renderer2.html'" data-collapsed="true"></li>
+      </ol>
+    </div>
+    </div>
+          </br>
+
+
+                                            <div class="row">
+
+                                                <div class="margs col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                                                <button class="col-lg-12 btn btn-danger btn-rounded-new delete" data-nodrag">
+                                                    Удалить
+                                                </button>
+                                 
+                                                </div>
+
+                                            </div>
+
+                                             <div class="row">
+                                                <div class="save-lock">Изменения сохранены!</div>
+                                                <div class="run-lock">Просчет запущен!</div>
+                                              </div>
+
+
+
+  <!-- <div class="col-sm-6">
+    <pre class="code">{{ tree2 | json }}</pre>
+  </div> -->

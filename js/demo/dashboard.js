@@ -443,12 +443,12 @@ $(window).on('load', function() {
     // =================================================================
     // Require Admin Core Javascript
     // =================================================================
-    $.niftyNoty({
+  /*  $.niftyNoty({
         type: 'dark',
         title: 'Welcome Administrator.',
         message: 'You will notice that you now have an admin menu<br> that appears on the right hand side.',
         container: 'floating',
         timer: 5000
-    });
+    }); */
 
 });

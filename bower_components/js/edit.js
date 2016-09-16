@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('demoApp')
-    .controller('CloningCtrl', ['$scope', function ($scope) {
+    .controller('EditCtrl', ['$scope', function ($scope) {
       $scope.remove = function (scope) {
         scope.remove();
       };
@@ -20,7 +20,7 @@
         });
       };
 
-        $scope.newItem = function () {
+       $scope.newItem = function () {
         var nodeData = $scope.tree2[$scope.tree2.length - 1];
         $scope.tree2.push({
           id: $scope.tree2.length + 1,
@@ -43,14 +43,57 @@
         'name_group': '',
         'url_group': '',
         'keys_group': '',
+        'nodes': [
+      {
+        "id": 11,
+        'number_group': '1.1',
+        'name_group': '',
+        'url_group': '',
+        'keys_group': '',
+        'nodes': [
+          {
+        "id": 111,
+        'number_group': '1.1.1',
+        'name_group': '',
+        'url_group': '',
+        'keys_group': '',
         'nodes': []
-      }, {
+          }
+        ]
+      },
+      {
+        "id": 12,
+        'number_group': '1.2',
+        'name_group': '',
+        'url_group': '',
+        'keys_group': '',
+        'nodes': []
+      }
+    ]
+  }, {
         'id': 2,
         'number_group': '2',
         'name_group': '',
         'url_group': '',
         'keys_group': '',
+        'nodes': [
+      {
+        "id": 21,
+        'number_group': '2.1',
+        'name_group': '',
+        'url_group': '',
+        'keys_group': '',
         'nodes': []
+      },
+      {
+        "id": 22,
+        'number_group': '2.2',
+        'name_group': '',
+        'url_group': '',
+        'keys_group': '',
+        'nodes': []
+      }
+    ]
       }, {
         'id': 3,
         'number_group': '3',
@@ -64,7 +107,16 @@
         'name_group': '',
         'url_group': '',
         'keys_group': '',
+        'nodes': [
+      {
+        "id": 41,
+        'number_group': '4.1',
+        'name_group': '',
+        'url_group': '',
+        'keys_group': '',
         'nodes': []
+      }
+    ]
       }];
     }]);
 

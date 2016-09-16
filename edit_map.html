@@ -2,11 +2,47 @@
 <html lang="en">
 
 <head>
+
+    <!--jQuery [ REQUIRED ]-->
+    <script src="js/jquery-2.2.4.min.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Редактирование карты сайта</title>
+    
+    <title>Редактирование и просмотр карты сайта</title>
     
     <link rel="shortcut icon" href="img/logo-favicon.png" type="img/png">
+
+
+  <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/source/angular-ui-tree.css">
+  <link rel="stylesheet" href="bower_components/css/app.css">
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+<script src="bower_components/source/main.js"></script>
+<script src="bower_components/source/controllers/handleCtrl.js"></script>
+<script src="bower_components/source/controllers/nodeCtrl.js"></script>
+<script src="bower_components/source/controllers/nodesCtrl.js"></script>
+<script src="bower_components/source/controllers/treeCtrl.js"></script>
+<script src="bower_components/source/directives/uiTree.js"></script>
+<script src="bower_components/source/directives/uiTreeHandle.js"></script>
+<script src="bower_components/source/directives/uiTreeNode.js"></script>
+<script src="bower_components/source/directives/uiTreeNodes.js"></script>
+<script src="bower_components/source/services/helper.js"></script>
+
+<script src="bower_components/js/edit_map.js"></script>
+<script src="bower_components/js/basic-example.js"></script>
+<script src="bower_components/js/filter-nodes.js"></script>
+<script src="bower_components/js/cloning.js"></script>
+<script src="bower_components/js/connected-trees.js"></script>
+<script src="bower_components/js/table-example.js"></script>
+<script src="bower_components/js/drop-confirmation.js"></script>
+<script src="bower_components/js/expand-on-hover.js"></script>
+<script src="bower_components/js/edit.js"></script>
+
 
     <!--STYLESHEET-->
     <!--=================================================-->
@@ -56,18 +92,16 @@
     <!-- Internal CSS file-->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
 
-
-
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="plugins/switchery/switchery.min.js"></script>
 
 
 
 <link href="plugins/bootstrap-select/bootstrap-select.css" rel="stylesheet">
-<script src="plugins/bootstrap-select/bootstrap-select.js   "></script>
-
-
-
-
+<script src="plugins/bootstrap-select/bootstrap-select.js"></script>
 
 
 
@@ -99,11 +133,15 @@
     <link href="plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
 
 
-
-
-
-
     
+
+        
+    <!--Dropzone [ OPTIONAL ]-->
+    <link href="plugins/dropzone/dropzone.min.css" rel="stylesheet">
+
+
+
+
     <!--JAVASCRIPT-->
     <!--=================================================-->
 
@@ -112,8 +150,7 @@
     <script src="plugins/pace/pace.min.js"></script>
 
 
-    <!--jQuery [ REQUIRED ]-->
-    <script src="js/jquery-2.2.4.min.js"></script>
+
 
     <!--BootstrapJS [ RECOMMENDED ]-->
     <script src="js/bootstrap.min.js"></script>
@@ -127,9 +164,9 @@
     <script src="js/demo/nifty-demo.min.js"></script>
 
     
-    <!--Morris.js [ OPTIONAL ]-->
+    <!--Morris.js [ OPTIONAL ]
     <script src="plugins/morris-js/morris.min.js"></script>
-	<script src="plugins/morris-js/raphael-js/raphael.min.js"></script>
+    <script src="plugins/morris-js/raphael-js/raphael.min.js"></script> -->
 
 
     <!--Sparkline [ OPTIONAL ]-->
@@ -193,11 +230,13 @@
     <script src="plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 
 
-    <!--Form Component [ SAMPLE ]-->
-    <script src="js/demo/form-component.js"></script>
+    
+    <!--=================================================
 
+    
+    <!--Dropzone [ OPTIONAL ]-->
+    <script src="plugins/dropzone/dropzone.min.js"></script>
 
-    <link rel="stylesheet" href="css/dev.css">
     
     <!--=================================================
 
@@ -231,7 +270,7 @@
 
 <!--TIPS-->
 <!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
-<body>
+<body ng-app="demoApp">
     <div id="container" class="effect aside-float aside-bright mainnav-lg">
         
         <!--NAVBAR-->
@@ -732,6 +771,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="panel">
                                 <div class="panel-body">
+
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="panel-heading">
@@ -741,14 +781,14 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
                                                 <h3 class="panel-title">
                                                     ID Проекта: 234 
                                                 </h3>
                                         </div>
 
 
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                                             <div class="pull-left search col-xs-11 col-sm-11 col-md-11 col-lg-11" style="padding-left: 0px;padding-right: 0px;">
 
                                                 <div id="show-key-word2" class="ax_default shape" style="opacity:0">
@@ -769,7 +809,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                                             <label for="sl1">Страна</label>
                                             <select name="" id="sl1" class="form-control" disabled="">
                                                 <option value="">Украина</option>
@@ -814,742 +854,40 @@
                                                     <option value="Belarus">Belarus</option>
                                                     <option value="Belgium">Belgium</option>
                                                     <option value="Belize">Belize</option>
-                                                    <option value="Benin">Benin</option>
-                                                    <option value="Bermuda">Bermuda</option>
-                                                    <option value="Bhutan">Bhutan</option>
-                                                    <option value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
-                                                    <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
-                                                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                                                    <option value="Botswana">Botswana</option>
-                                                    <option value="Bouvet Island">Bouvet Island</option>
-                                                    <option value="Brazil">Brazil</option>
-                                                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
-                                                    <option value="Brunei Darussalam">Brunei Darussalam</option>
-                                                    <option value="Bulgaria">Bulgaria</option>
-                                                    <option value="Burkina Faso">Burkina Faso</option>
-                                                    <option value="Burundi">Burundi</option>
-                                                    <option value="Cambodia">Cambodia</option>
-                                                    <option value="Cameroon">Cameroon</option>
-                                                    <option value="Canada">Canada</option>
-                                                    <option value="Cape Verde">Cape Verde</option>
-                                                    <option value="Cayman Islands">Cayman Islands</option>
-                                                    <option value="Central African Republic">Central African Republic</option>
-                                                    <option value="Chad">Chad</option>
-                                                    <option value="Chile">Chile</option>
-                                                    <option value="China">China</option>
-                                                    <option value="Christmas Island">Christmas Island</option>
-                                                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                                                    <option value="Colombia">Colombia</option>
-                                                    <option value="Comoros">Comoros</option>
-                                                    <option value="Congo">Congo</option>
-                                                    <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
-                                                    <option value="Cook Islands">Cook Islands</option>
-                                                    <option value="Costa Rica">Costa Rica</option>
-                                                    <option value="Cote D&apos;ivoire">Cote D\'ivoire</option>
-                                                    <option value="Croatia">Croatia</option>
-                                                    <option value="Cuba">Cuba</option>
-                                                    <option value="Curacao">Curacao</option>
-                                                    <option value="Cyprus">Cyprus</option>
-                                                    <option value="Czech Republic">Czech Republic</option>
-                                                    <option value="Denmark">Denmark</option>
-                                                    <option value="Djibouti">Djibouti</option>
-                                                    <option value="Dominica">Dominica</option>
-                                                    <option value="Dominican Republic">Dominican Republic</option>
-                                                    <option value="Ecuador">Ecuador</option>
-                                                    <option value="Egypt">Egypt</option>
-                                                    <option value="El Salvador">El Salvador</option>
-                                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                                    <option value="Eritrea">Eritrea</option>
-                                                    <option value="Estonia">Estonia</option>
-                                                    <option value="Ethiopia">Ethiopia</option>
-                                                    <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
-                                                    <option value="Faroe Islands">Faroe Islands</option>
-                                                    <option value="Fiji">Fiji</option>
-                                                    <option value="Finland">Finland</option>
-                                                    <option value="France">France</option>
-                                                    <option value="French Guiana">French Guiana</option>
-                                                    <option value="French Polynesia">French Polynesia</option>
-                                                    <option value="French Southern Territories">French Southern Territories</option>
-                                                    <option value="Gabon">Gabon</option>
-                                                    <option value="Gambia">Gambia</option>
-                                                    <option value="Georgia">Georgia</option>
-                                                    <option value="Germany">Germany</option>
-                                                    <option value="Ghana">Ghana</option>
-                                                    <option value="Gibraltar">Gibraltar</option>
-                                                    <option value="Greece">Greece</option>
-                                                    <option value="Greenland">Greenland</option>
-                                                    <option value="Grenada">Grenada</option>
-                                                    <option value="Guadeloupe">Guadeloupe</option>
-                                                    <option value="Guam">Guam</option>
-                                                    <option value="Guatemala">Guatemala</option>
-                                                    <option value="Guernsey">Guernsey</option>
-                                                    <option value="Guinea">Guinea</option>
-                                                    <option value="Guinea-bissau">Guinea-bissau</option>
-                                                    <option value="Guyana">Guyana</option>
-                                                    <option value="Haiti">Haiti</option>
-                                                    <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
-                                                    <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
-                                                    <option value="Honduras">Honduras</option>
-                                                    <option value="Hong Kong">Hong Kong</option>
-                                                    <option value="Hungary">Hungary</option>
-                                                    <option value="Iceland">Iceland</option>
-                                                    <option value="India">India</option>
-                                                    <option value="Indonesia">Indonesia</option>
-                                                    <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
-                                                    <option value="Iraq">Iraq</option>
-                                                    <option value="Ireland">Ireland</option>
-                                                    <option value="Isle of Man">Isle of Man</option>
-                                                    <option value="Israel">Israel</option>
-                                                    <option value="Italy">Italy</option>
-                                                    <option value="Jamaica">Jamaica</option>
-                                                    <option value="Japan">Japan</option>
-                                                    <option value="Jersey">Jersey</option>
-                                                    <option value="Jordan">Jordan</option>
-                                                    <option value="Kazakhstan">Kazakhstan</option>
-                                                    <option value="Kenya">Kenya</option>
-                                                    <option value="Kiribati">Kiribati</option>
-                                                    <option value="Korea, Democratic People&apos;s Republic of">Korea, Democratic People\'s Republic of</option>
-                                                    <option value="Korea, Republic of">Korea, Republic of</option>
-                                                    <option value="Kuwait">Kuwait</option>
-                                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                                    <option value="Lao People&apos;s Democratic Republic">Lao People\'s Democratic Republic</option>
-                                                    <option value="Latvia">Latvia</option>
-                                                    <option value="Lebanon">Lebanon</option>
-                                                    <option value="Lesotho">Lesotho</option>
-                                                    <option value="Liberia">Liberia</option>
-                                                    <option value="Libya">Libya</option>
-                                                    <option value="Liechtenstein">Liechtenstein</option>
-                                                    <option value="Lithuania">Lithuania</option>
-                                                    <option value="Luxembourg">Luxembourg</option>
-                                                    <option value="Macao">Macao</option>
-                                                    <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
-                                                    <option value="Madagascar">Madagascar</option>
-                                                    <option value="Malawi">Malawi</option>
-                                                    <option value="Malaysia">Malaysia</option>
-                                                    <option value="Maldives">Maldives</option>
-                                                    <option value="Mali">Mali</option>
-                                                    <option value="Malta">Malta</option>
-                                                    <option value="Marshall Islands">Marshall Islands</option>
-                                                    <option value="Martinique">Martinique</option>
-                                                    <option value="Mauritania">Mauritania</option>
-                                                    <option value="Mauritius">Mauritius</option>
-                                                    <option value="Mayotte">Mayotte</option>
-                                                    <option value="Mexico">Mexico</option>
-                                                    <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
-                                                    <option value="Moldova, Republic of">Moldova, Republic of</option>
-                                                    <option value="Monaco">Monaco</option>
-                                                    <option value="Mongolia">Mongolia</option>
-                                                    <option value="Montenegro">Montenegro</option>
-                                                    <option value="Montserrat">Montserrat</option>
-                                                    <option value="Morocco">Morocco</option>
-                                                    <option value="Mozambique">Mozambique</option>
-                                                    <option value="Myanmar">Myanmar</option>
-                                                    <option value="Namibia">Namibia</option>
-                                                    <option value="Nauru">Nauru</option>
-                                                    <option value="Nepal">Nepal</option>
-                                                    <option value="Netherlands">Netherlands</option>
-                                                    <option value="New Caledonia">New Caledonia</option>
-                                                    <option value="New Zealand">New Zealand</option>
-                                                    <option value="Nicaragua">Nicaragua</option>
-                                                    <option value="Niger">Niger</option>
-                                                    <option value="Nigeria">Nigeria</option>
-                                                    <option value="Niue">Niue</option>
-                                                    <option value="Norfolk Island">Norfolk Island</option>
-                                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
-                                                    <option value="Norway">Norway</option>
-                                                    <option value="Oman">Oman</option>
-                                                    <option value="Pakistan">Pakistan</option>
-                                                    <option value="Palau">Palau</option>
-                                                    <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
-                                                    <option value="Panama">Panama</option>
-                                                    <option value="Papua New Guinea">Papua New Guinea</option>
-                                                    <option value="Paraguay">Paraguay</option>
-                                                    <option value="Peru">Peru</option>
-                                                    <option value="Philippines">Philippines</option>
-                                                    <option value="Pitcairn">Pitcairn</option>
-                                                    <option value="Poland">Poland</option>
-                                                    <option value="Portugal">Portugal</option>
-                                                    <option value="Puerto Rico">Puerto Rico</option>
-                                                    <option value="Qatar">Qatar</option>
-                                                    <option value="Reunion">Reunion</option>
-                                                    <option value="Romania">Romania</option>
-                                                    <option value="Russian Federation">Russian Federation</option>
-                                                    <option value="Rwanda">Rwanda</option>
-                                                    <option value="Saint Barthelemy">Saint Barthelemy</option>
-                                                    <option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
-                                                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                                                    <option value="Saint Lucia">Saint Lucia</option>
-                                                    <option value="Saint Martin (French part)">Saint Martin (French part)</option>
-                                                    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                                                    <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
-                                                    <option value="Samoa">Samoa</option>
-                                                    <option value="San Marino">San Marino</option>
-                                                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                                                    <option value="Saudi Arabia">Saudi Arabia</option>
-                                                    <option value="Senegal">Senegal</option>
-                                                    <option value="Serbia">Serbia</option>
-                                                    <option value="Seychelles">Seychelles</option>
-                                                    <option value="Sierra Leone">Sierra Leone</option>
-                                                    <option value="Singapore">Singapore</option>
-                                                    <option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
-                                                    <option value="Slovakia">Slovakia</option>
-                                                    <option value="Slovenia">Slovenia</option>
-                                                    <option value="Solomon Islands">Solomon Islands</option>
-                                                    <option value="Somalia">Somalia</option>
-                                                    <option value="South Africa">South Africa</option>
-                                                    <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
-                                                    <option value="South Sudan">South Sudan</option>
-                                                    <option value="Spain">Spain</option>
-                                                    <option value="Sri Lanka">Sri Lanka</option>
-                                                    <option value="Sudan">Sudan</option>
-                                                    <option value="Suriname">Suriname</option>
-                                                    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
-                                                    <option value="Swaziland">Swaziland</option>
-                                                    <option value="Sweden">Sweden</option>
-                                                    <option value="Switzerland">Switzerland</option>
-                                                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
-                                                    <option value="Taiwan, Province of China">Taiwan, Province of China</option>
-                                                    <option value="Tajikistan">Tajikistan</option>
-                                                    <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
-                                                    <option value="Thailand">Thailand</option>
-                                                    <option value="Timor-leste">Timor-leste</option>
-                                                    <option value="Togo">Togo</option>
-                                                    <option value="Tokelau">Tokelau</option>
-                                                    <option value="Tonga">Tonga</option>
-                                                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                                                    <option value="Tunisia">Tunisia</option>
-                                                    <option value="Turkey">Turkey</option>
-                                                    <option value="Turkmenistan">Turkmenistan</option>
-                                                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
-                                                    <option value="Tuvalu">Tuvalu</option>
-                                                    <option value="Uganda">Uganda</option>
-                                                    <option value="Ukraine">Ukraine</option>
-                                                    <option value="United Arab Emirates">United Arab Emirates</option>
-                                                    <option value="United Kingdom">United Kingdom</option>
-                                                    <option value="United States">United States</option>
-                                                    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
-                                                    <option value="Uruguay">Uruguay</option>
-                                                    <option value="Uzbekistan">Uzbekistan</option>
-                                                    <option value="Vanuatu">Vanuatu</option>
-                                                    <option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
-                                                    <option value="Viet Nam">Viet Nam</option>
-                                                    <option value="Virgin Islands, British">Virgin Islands, British</option>
-                                                    <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
-                                                    <option value="Wallis and Futuna">Wallis and Futuna</option>
-                                                    <option value="Western Sahara">Western Sahara</option>
-                                                    <option value="Yemen">Yemen</option>
-                                                    <option value="Zambia">Zambia</option>
-                                                    <option value="Zimbabwe">Zimbabwe</option>
                                                 </select>
                                                   </div>
 
                                     </div>
+
+
                                     <div class="row">
                                         <div class="margs col-lg-12">
-                                           <div class="bootstrap-table">
-                                               <div class="fixed-table-body">
+
+                                                   <div class="row">
+      <div class="col-md-4" style="display: none">
+        <h2>View Examples</h2>
+        <ol>
+          <li><a href="#/edit_map">Edit_map</a></li>
+        </ol>
+      </div>
+
+              
+
+
+<div class="row">
+    <div class="col-sm-12">
+      <ng-view></ng-view>
+    </div>
+</div>
+
+                                                    </div>
 
 
 
-                                                   <table id="map" class="table table-striped creat">
-                                                       <thead>
-                                                           <tr class="tb_head">
-                                                               <td>
-                                                                   <input class="check_all" type="checkbox">
-                                                               </td>
-                                                               <td>
-                                                                   Название группы
-                                                               </td>
-                                                               <td>
-                                                                   Ссылка на ваш сайт
-                                                               </td>
-                                                               <td>
-                                                                   По каким бы запросам Вы бы искали этот товар/услугу?
-                                                               </td>
-                                                               <td>
-                                                                   Способ подбора
-                                                               </td>
-
-                                                               <td>
-                                                                   Запросы
-                                                               </td>
-                                                               <td>
-                                                                   Конкуренция
-                                                               </td>
-                                                               <td>
-                                                                   Удалить
-                                                               </td>
-                                                           </tr>
-                                                       </thead>
-                                                       <tbody class="tbody">
-
-
-                                                    <tr class="tb_row">
-                                                               <td style="padding-left: 15px;">
-                                            <div class="row">                     
-                                                <div style="display: inline;"><input class="item" type="checkbox"></div>
-
-                                                <div style="display: inline;"><a href="#" class="mapping"><b class="success fa fa-plus"></b></a></div> 
-
-                                                <div style="display: inline;">&nbsp;&nbsp;1</div>
-
-                                                 <div style="display: inline;">
-                                                <a href="" class=""><button class="btn btn-default btn-icon btn-circle"><i class="ti-angle-right"></i></button></a>
-                                                </div>
-                                             </div>
-                                                               </td>
-                                                                <td>
-                                                                   <input value="Запчасти для пылесосов" type="text" class="form-control inp">
-                                                               </td>
-                                                               <td>
-                                                                      <a href="#" class="showin"><i class="fa fa-link"></i></a>
-                                                                     <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
-                                                                 </td>
-                                                              <td>
-                                                                  <input value="запчасти для пылесосов, ремонт пылесосов, пылесосы" type="text" class="form-control inp">
-                                                              </td>
-                                                              <td>
-                                                                  <ul id="pll" class="nav nav-pills">
-                                                                      <li class="active btn-rounded-new">
-                                                                          <a href="#" data-toggle="pill">
-                                                                              Подобрать
-                                                                          </a>
-                                                                      </li>
-                                                                      <li class="btn-rounded-new">
-                                                                          <a href="#" data-toggle="pill">
-                                                                              Добавить
-                                                                          </a>
-                                                                      </li>
-                                                                  </ul>
-                                                              </td>
-                                                              <td>
-                                                                   <a href="keyword_research_v1.html">0 / 20</a>
-                                                               </td>
-                                                               <td>
-                                                              <span class="text-success"><i class="fa fa-hourglass-half fa-2x"></i></span>
-                                                                   
-                                                               </td>
-                                                              <td>
-                                                                  <button class="btn btn-xs btn-danger btn-rounded-new">
-                                                                      <i class="fa fa-times"></i>
-                                                                  </button>
-                                                              </td>
-                                                           </tr>
-
-                                                           <tr class="tb_row">
-                                                               <td style="padding-left: 15px;">
-                                                    <div class="row">  
-                                                <div style="display: inline;"><input class="item" type="checkbox"></div>
-
-                                                <div style="display: inline;"><a href="#" class="mapping"><b class="success fa fa-plus"></b></a></div> 
-
-                                                <div style="display: inline;">&nbsp;&nbsp;2</div>
-
-                                                 <div style="display: inline;">
-                                                <a href="" class=""><button class="btn btn-default btn-icon btn-circle"><i class="ti-angle-right"></i></button></a>
-                                                </div>
-                                            </div>
-                                                               </td>
-                                                               <td>
-                                                                   <input value="Запчасти для пылесосов" type="text" class="form-control inp">
-                                                               </td>
-                                                               <td>
-                                                                      <a href="#" class="showin"><i class="fa fa-link"></i></a>
-                                                                     <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
-                                                                 </td>>
-                                                              <td>
-                                                                  <input value="запчасти для пылесосов, ремонт пылесосов, пылесосы" type="text" class="form-control inp">
-                                                              </td>
-                                                              <td>
-                                                                  <!--<div class="btn-group">
-                                                                      <button class="btn btn-xs btn-rounded-new actives btns1">
-                                                                          Подобрать
-                                                                      </button>
-                                                                      <button class="btn btn-xs btn-rounded-new btns2">
-                                                                          Добавить
-                                                                      </button>
-                                                                  </div>-->
-                                                                  <ul id="pll" class="nav nav-pills">
-                                                                      <li class="active btn-rounded-new">
-                                                                          <a href="#" data-toggle="pill">
-                                                                              Подобрать
-                                                                          </a>
-                                                                      </li>
-                                                                      <li class="btn-rounded-new">
-                                                                          <a href="#" data-toggle="pill">
-                                                                              Добавить
-                                                                          </a>
-                                                                      </li>
-                                                                  </ul>
-                                                              </td>
-                                                              <td>
-                                                                   <a href="keyword_research_v1.html">12 / 20</a>
-                                                               </td>
-                                                               <td>
-                                                               <div class="dropdown">
-                                    <a title="12:08 02.09.2016" id="projectsTaskSelector" class="lang-selector dropdown-toggle btn btn-default" href="#" data-toggle="dropdown" aria-expanded="false">
-                                      <span class="lang-selected">
-                                        <span class="text-mint">
-                                            <i class="fa fa-area-chart" style="font-size:25px;"></i>
-                                        </span>
-                                        <span class="lang-id"></span>
-                                        <span class="lang-name"></span>
-                                      </span>
-                                    </a>
-
-                                    <ul class="dropdown-menu icon-menu">
-                                        <li class="align-left" title="12:08 02.09.2016">
-                                          <a class="dec-none" target="_blank" href="/ru/get_project_report/6918_5090/www.od.service-market.com.ua">
-                                            <span class="text-info">
-                                              <i class="fa fa-link" style="font-size:20px;"></i> Отчет по ссылке
-                                            </span>
-                                            <span class="lang-id">web1079</span>
-                                          </a>
-                                        </li>
-                                        <li class="align-left" title="12:08 02.09.2016">
-                                          <a class="dec-none" target="_blank" href="/ru/get_project_pdf_report/6918_5090/www.od.service-market.com.ua/0-1">
-                                            <span class="text-danger">
-                                              <i class="fa fa-file-pdf-o" style="font-size:20px;"></i> Отчет в PDF
-                                            </span>
-                                            <span class="lang-id">pdf1079</span>
-                                          </a>
-                                        </li>
-
-                                        <li class="align-left">
-                                        <a class="dec-none" href="#" onclick="resetReportTask(1079);">
-                                          <span class="text-info">
-                                            <i class="fa fa-link" style="font-size:20px;"></i> КП по ссылке
-                                          </span>
-                                          <span class="lang-id">reload1079</span>
-                                        </a>
-                                      </li>
-
-                                      <li class="align-left">
-                                        <a class="dec-none" href="#" onclick="resetReportTask(1079);">
-                                          <span class="text-info">
-                                            <i class="fa fa-file-pdf-o" style="font-size:20px;"></i> КП в PDF
-                                          </span>
-                                          <span class="lang-id">reload1079</span>
-                                        </a>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                                                   
-                                                               </td>
-                                                              <td>
-                                                                  <button class="btn btn-xs btn-danger btn-rounded-new">
-                                                                      <i class="fa fa-times"></i>
-                                                                  </button>
-                                                              </td>
-                                                           </tr>
-
-                                                           <tr class="tb_row tb_row1">
-                                                               <td style="padding-left: 15px;">
-
-                                            <div class="row">  
-                                                <div style="display: inline;"><input class="item" type="checkbox"></div>
-
-                                                <div style="display: inline;"><a href="#" class="mapping"><b class="success fa fa-plus"></b></a></div> 
-
-                                                <div style="display: inline;">&nbsp;&nbsp;3</div>
-
-                                                 <div style="display: inline;">
-                                                <a href="" class=""><button class="btn btn-default btn-icon btn-circle"><i class="ti-angle-right"></i></button></a>
-                                                </div>
-
-                                            </div>
-                                                               </td>
-                                                               <td>
-                                                                   <input value="Запчасти для фенов" type="text" class="form-control inp">
-                                                               </td>
-                                                               <td>
-                                                                      <a href="#" class="showin"><i class="fa fa-link"></i></a>
-                                                                     <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
-                                                                 </td>
-                                                              <td>
-                                                                  <input value="запчасти для фенов, ремонт фенов, фены" type="text" class="form-control inp">
-                                                              </td>
-                                                              <td>
-                                                                      <ul id="pll" class="nav nav-pills">
-                                                                          <li class="active btn-rounded-new">
-                                                                              <a href="#" data-toggle="pill">
-                                                                                  Подобрать
-                                                                              </a>
-                                                                          </li>
-                                                                          <li class="btn-rounded-new">
-                                                                              <a href="#" data-toggle="pill">
-                                                                                  Добавить
-                                                                              </a>
-                                                                          </li>
-                                                                      </ul>
-                                                              </td>
-                                                                                                                            <td>
-                                                                   <a href="keyword_research_v1.html">0 / 20</a>
-                                                               </td>
-                                                               <td>
-                                                               <button class="btn btn-primary btn-icon btn-circle"><i class="ti-reload"></i></button>
-                                                                   
-                                                               </td>
-                                                              <td>
-                                                                  <button class="btn btn-xs btn-danger btn-rounded-new">
-                                                                      <i class="fa fa-times"></i>
-                                                                  </button>
-                                                              </td>
-                                                           </tr>
-<tr class="tb_row tb_row1 tb_row1-2">
-                                                               <td style="padding-left: 30px;">
-
-                                            <div class="row">  
-                                                <div style="display: inline;"><input class="item" type="checkbox"></div>
-
-                                                <div style="display: inline;"><a href="#" class="mapping"><b class="success fa fa-plus"></b></a></div> 
-
-                                                <div style="display: inline;">&nbsp;&nbsp;3.1</div>
-
-                                                 <div style="display: inline;">
-                                                <a href="" class=""><button class="btn btn-default btn-icon btn-circle"><i class="ti-angle-right"></i></button></a>
-                                                </div>
-
-                                            </div>
-                                                               </td>
-                                                               <td>
-                                                                   <input value="Запчасти для фенов" type="text" class="form-control inp">
-                                                               </td>
-                                                               <td>
-                                                                      <a href="#" class="showin"><i class="fa fa-link"></i></a>
-                                                                     <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
-                                                                 </td>
-                                                              <td>
-                                                                  <input value="запчасти для фенов, ремонт фенов, фены" type="text" class="form-control inp">
-                                                              </td>
-                                                              <td>
-                                                                      <ul id="pll" class="nav nav-pills">
-                                                                          <li class="active btn-rounded-new">
-                                                                              <a href="#" data-toggle="pill">
-                                                                                  Подобрать
-                                                                              </a>
-                                                                          </li>
-                                                                          <li class="btn-rounded-new">
-                                                                              <a href="#" data-toggle="pill">
-                                                                                  Добавить
-                                                                              </a>
-                                                                          </li>
-                                                                      </ul>
-                                                              </td>
-                                                                                                                            <td>
-                                                                   <a href="keyword_research_v1.html">0 / 20</a>
-                                                               </td>
-                                                               <td>
-                                                               <button class="btn btn-primary btn-icon btn-circle"><i class="ti-reload"></i></button>
-                                                                   
-                                                               </td>
-                                                              <td>
-                                                                  <button class="btn btn-xs btn-danger btn-rounded-new">
-                                                                      <i class="fa fa-times"></i>
-                                                                  </button>
-                                                              </td>
-                                                           </tr><tr class="tb_row tb_row1 tb_row1-2">
-                                                               <td style="padding-left: 30px;">
-
-                                            <div class="row">  
-                                                <div style="display: inline;"><input class="item" type="checkbox"></div>
-
-                                                <div style="display: inline;"><a href="#" class="mapping"><b class="success fa fa-plus"></b></a></div> 
-
-                                                <div style="display: inline;">&nbsp;&nbsp;3.2</div>
-
-                                                 <div style="display: inline;">
-                                                <a href="" class=""><button class="btn btn-default btn-icon btn-circle"><i class="ti-angle-right"></i></button></a>
-                                                </div>
-
-                                            </div>
-                                                               </td>
-                                                               <td>
-                                                                   <input value="Запчасти для фенов" type="text" class="form-control inp">
-                                                               </td>
-                                                               <td>
-                                                                      <a href="#" class="showin"><i class="fa fa-link"></i></a>
-                                                                     <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
-                                                                 </td>
-                                                              <td>
-                                                                  <input value="запчасти для фенов, ремонт фенов, фены" type="text" class="form-control inp">
-                                                              </td>
-                                                              <td>
-                                                                      <ul id="pll" class="nav nav-pills">
-                                                                          <li class="active btn-rounded-new">
-                                                                              <a href="#" data-toggle="pill">
-                                                                                  Подобрать
-                                                                              </a>
-                                                                          </li>
-                                                                          <li class="btn-rounded-new">
-                                                                              <a href="#" data-toggle="pill">
-                                                                                  Добавить
-                                                                              </a>
-                                                                          </li>
-                                                                      </ul>
-                                                              </td>
-                                                                                                                            <td>
-                                                                   <a href="keyword_research_v1.html">0 / 20</a>
-                                                               </td>
-                                                               <td>
-                                                               <button class="btn btn-primary btn-icon btn-circle"><i class="ti-reload"></i></button>
-                                                                   
-                                                               </td>
-                                                              <td>
-                                                                  <button class="btn btn-xs btn-danger btn-rounded-new">
-                                                                      <i class="fa fa-times"></i>
-                                                                  </button>
-                                                              </td>
-                                                           </tr><tr class="tb_row tb_row1 tb_row1-2 tb_row1-2-3">
-                                                               <td style="padding-left: 60px;">
-
-                                            <div class="row">  
-                                                <div style="display: inline;"><input class="item" type="checkbox"></div>
-
-                                                <div style="display: inline;"><a href="#" class="mapping"><b class="success fa fa-plus"></b></a></div> 
-
-                                                <div style="display: inline;">&nbsp;&nbsp;3.2.1</div>
-
-                                                 <div style="display: inline;">
-                                                <a href="" class=""><button class="btn btn-default btn-icon btn-circle"><i class="ti-angle-right"></i></button></a>
-                                                </div>
-
-                                            </div>
-                                                               </td>
-                                                               <td>
-                                                                   <input value="Запчасти для фенов" type="text" class="form-control inp">
-                                                               </td>
-                                                               <td>
-                                                                      <a href="#" class="showin"><i class="fa fa-link"></i></a>
-                                                                     <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
-                                                                 </td>
-                                                              <td>
-                                                                  <input value="запчасти для фенов, ремонт фенов, фены" type="text" class="form-control inp">
-                                                              </td>
-                                                              <td>
-                                                                      <ul id="pll" class="nav nav-pills">
-                                                                          <li class="active btn-rounded-new">
-                                                                              <a href="#" data-toggle="pill">
-                                                                                  Подобрать
-                                                                              </a>
-                                                                          </li>
-                                                                          <li class="btn-rounded-new">
-                                                                              <a href="#" data-toggle="pill">
-                                                                                  Добавить
-                                                                              </a>
-                                                                          </li>
-                                                                      </ul>
-                                                              </td>
-                                                              <td>
-                                                                   <a href="keyword_research_v1.html">0 / 20</a>
-                                                               </td>
-                                                               <td>
-                                                               <button class="btn btn-primary btn-icon btn-circle"><i class="ti-reload"></i></button>
-                                                                   
-                                                               </td>
-                                                              <td>
-                                                                  <button class="btn btn-xs btn-danger btn-rounded-new">
-                                                                      <i class="fa fa-times"></i>
-                                                                  </button>
-                                                              </td>
-                                                           </tr>
-                                                            
-                                                            <tr class="tb_row">
-                                                               <td style="padding-left: 15px;">
-                                                <div class="row">  
-                                                <div style="display: inline;"><input class="item" type="checkbox"></div>
-
-                                                <div style="display: inline;"><a href="#" class="mapping"><b class="success fa fa-plus"></b></a></div> 
-
-                                                <div style="display: inline;">&nbsp;&nbsp;4</div>
-
-                                                 <div style="display: inline;">
-                                                <a href="" class=""><button class="btn btn-default btn-icon btn-circle"><i class="ti-angle-right"></i></button></a>
-                                                </div>
-
-                                            </div>
-                                                               </td>
-                                                                <td>
-                                                                   <input value="Запчасти для пылесосов" type="text" class="form-control inp">
-                                                               </td>
-
-                                                                <td>
-                                                                      <a href="#" class="showin"><i class="fa fa-link"></i></a>
-                                                                     <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
-                                                                 </td>
-
-
-                                                              <td>
-                                                                      <buton class="btn btn-xs btn-primary btn-rounded-new">
-                                                                          <i class="fa fa-link"></i>
-                                                                      </buton>
-                                                                 </td>
-                                                              <td>
-                                                                  <input value="запчасти для пылесосов, ремонт пылесосов, пылесосы" type="text" class="form-control inp">
-                                                              </td>
-                                                              <td>
-                                                                  <ul id="pll" class="nav nav-pills">
-                                                                      <li class="active btn-rounded-new">
-                                                                          <a href="#" data-toggle="pill">
-                                                                              Подобрать
-                                                                          </a>
-                                                                      </li>
-                                                                      <li class="btn-rounded-new">
-                                                                          <a href="#" data-toggle="pill">
-                                                                              Добавить
-                                                                          </a>
-                                                                      </li>
-                                                                  </ul>
-                                                              </td>
-                                                              <td>
-                                                                   <a href="keyword_research_v1.html">0 / 20</a>
-                                                               </td>
-                                                               <td>
-                                                               <button class="btn btn-primary btn-icon btn-circle"><i class="ti-reload"></i></button>
-                                                                   
-                                                               </td>
-                                                              <td>
-                                                                  <button class="btn btn-xs btn-danger btn-rounded-new">
-                                                                      <i class="fa fa-times"></i>
-                                                                  </button>
-                                                              </td>
-                                                           </tr>
-
-
-                                                            
-
-
-                                                       </tbody>
-
-                                                   </table>
-                                               </div>
-                                           </div>
-                                        </div>
-                                        <div class="row">
-                                                <div class="margs col-lg-4">
-                                                    <button class="col-lg-12 btn btn-default btn-rounded-new">
-                                                        <i class="fa fa-plus"></i>
-                                                    Добавить ещё 10 строк</button>
-                                                </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="margs col-lg-2 col-md-2 col-sm-3 col-xs-4">
-                                                <button class="col-lg-12 btn btn-success btn-rounded-new">
-                                                    Сохранить
-                                                </button>
-                                            </div>
-                                            <div class="margs col-lg-2 col-md-2 col-sm-3 col-xs-4">
-                                                <button class="col-lg-12 btn btn-primary btn-rounded-new">
-                                                    Запустить
-                                                </button>
-                                            </div>
-                                            <div class="margs col-lg-2 col-md-2 col-sm-3 col-xs-4">
-                                                <button class="col-lg-12 btn btn-danger btn-rounded-new">
-                                                    Удалить  
-                                                </button>
-                                            </div>
-                                        </div>
                                     </div>
+                                </div>
+
+
                                 </div>
                             </div>
                         </div>

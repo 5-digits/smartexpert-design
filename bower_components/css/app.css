@@ -143,6 +143,15 @@ padding: 7px 15px;
     margin: 20px;
 }
 
+.save-error {
+    color: #ee4a47;
+    font-size: 11pt;
+    font-weight: 700;
+    display: none;
+    float: left;
+    margin: 20px;
+}
+
 .run-lock {
     color: rgb(22, 144, 243);
     font-size: 11pt;
@@ -151,5 +160,10 @@ padding: 7px 15px;
     float: left;
     margin: 20px;
 }
+
+.margim-10-lr {
+margin: 0 10px;
+}
+
 
 

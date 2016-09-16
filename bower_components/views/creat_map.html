@@ -1,0 +1,192 @@
+<!--Form File Upload [ SAMPLE ]-->
+<script src="js/demo/form-file-upload.js"></script>
+
+<!-- Nested node template -->
+<script type="text/ng-template" id="nodes_renderer2.html">
+
+  <div class="tree-node">
+
+    <div class="pull-left tree-check">
+      <input class="item" type="checkbox">
+    </div>
+
+    <div class="pull-left tree-handle" ui-tree-handle>
+      <span class="glyphicon glyphicon-list"></span>
+    </div>
+
+    <div class="tree-node-content"> 
+
+    <span class="number-group">{{node.number_group}}</span>
+    <a class="button-plus btn btn-primary btn-rounded-new" ng-if="node.id < 11100000000" data-nodrag ng-click="newSubItem(this)">
+      <span class="glyphicon glyphicon-plus"></span></a>
+    <a class="btn btn-success btn-rounded-new" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)">
+      <span class="glyphicon"
+        ng-class="{
+          'glyphicon-chevron-right': collapsed,
+          'glyphicon-chevron-down': !collapsed
+        }">
+        </span>
+      </a>
+
+      <input type="hidden" ng-model="node.number_group">
+      <input class="form-control inp input-size" type="text" ng-model="node.name_group" placeholder="Название группы">
+      <input class="form-control inp input-size" type="text" ng-model="node.url_group" placeholder="Ссылка на сайт">
+      <input class="form-control inp input-size" type="text" ng-model="node.keys_group" placeholder="Поисковые запросы">
+
+      <div class="block-type-search" style="display: inline-block;">
+      <ul id="pll" class="nav nav-pills" style="display: inline-block;">
+                                                                      <li class="btn-rounded-new active">
+                                                                          <a class="type-search" data-toggle="pill">
+                                                                              Подобрать
+                                                                          </a>
+                                                                      </li>
+                                                                      <li class="btn-rounded-new">
+                                                                          <a class="type-search" data-toggle="pill">
+                                                                              Добавить
+                                                                          </a>
+                                                                      </li>
+                                                                  </ul>
+                                                                  </div>
+        
+      <a class="pull-right btn btn-danger btn-rounded-new" data-nodrag ng-click="remove(this)">
+      <span class="glyphicon glyphicon-remove"></span></a>
+
+    </div>
+
+  </div>
+
+  <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+    <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer2.html'">
+    </li>
+  </ol>
+
+</script>
+                          <div class="row">
+
+        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+                <button class="btn btn-success btn-rounded-new" ng-click="expandAll()">Развернуть все</button>
+                <button class="btn btn-success btn-rounded-new" ng-click="collapseAll()">Свернуть все</button>
+
+        </div>
+
+        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+
+                                <!-- The fileinput-button span is used to style the file input field as button -->
+                                <span class="btn btn-success fileinput-button btn-rounded-new dz-clickable">
+                                    <i class="fa fa-plus"></i>
+                                    <span>Загрузить карту сайта EXEL</span>
+                                </span>
+                    
+                                <div class="btn-group pull-right">
+                                    <button id="dz-upload-btn" class="btn btn-primary btn-rounded-new" type="submit" disabled>
+                                        <i class="fa fa-upload-cloud"></i> Upload
+                                    </button>
+                                    <button id="dz-remove-btn" class="btn btn-danger btn-rounded-new cancel" type="reset" disabled>
+                                        <i class="demo-pli-cross"></i>
+                                    </button>
+                                </div>
+                    
+                    
+                            <div id="dz-previews">
+                                <div id="dz-template" class="pad-top bord-top">
+                                    <div class="media">
+                                        <div class="media-body">
+                                             <!--This is used as the file preview template-->
+                                            <div class="media-block">
+                                                <div class="media-left">
+                                                    <img class="dz-img" data-dz-thumbnail>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text-main text-bold mar-no text-overflow" data-dz-name></p>
+                                                    <span class="dz-error text-danger text-sm" data-dz-errormessage></span>
+                                                    <p class="text-sm" data-dz-size></p>
+                                                    <div id="dz-total-progress" style="opacity:0">
+                                                         <div class="progress progress-xs active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                                            <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media-right">
+                                            <button data-dz-remove class="btn btn-xs btn-danger dz-cancel"><i class="demo-pli-cross"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        </div>  
+    </div>   
+
+    <div class="col-sm-12">
+        <div class="angular-ui-tree">
+
+        <ol class="ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
+
+        <li class="angular-ui-tree-node">
+
+
+    <div class="pull-left tree-check-first">
+      <input class="check_all" type="checkbox">
+    </div>
+
+    <div class="pull-left tree-handle-head">
+    </div>
+
+
+      </li>
+
+      </ol>
+
+    </div>
+    </div>
+
+
+    <div class="col-sm-12">
+    <div ui-tree id="tree2-root" data-clone-enabled="true" data-max-depth="3">
+      <ol ui-tree-nodes="" ng-model="tree2">
+        <li ng-repeat="node in tree2" ui-tree-node ng-include="'nodes_renderer2.html'"></li>
+      </ol>
+    </div>
+    </div>
+          </br>
+                                                <div class="row">
+
+                                                <div class="margs col-lg-4 col-md-4 col-sm-6 col-xs-8">
+                                                    <button class="col-lg-12 btn btn-default btn-rounded-new" ng-click="newItem()">
+                                                        <i class="fa fa-plus"></i>
+                                                    Добавить строку</button>
+                                                </div>
+
+                                                </div>
+
+                                            <div class="row">
+
+                                                <div class="margs col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                                                <button class="col-lg-12 btn btn-success btn-rounded-new save-on">
+                                                    Сохранить
+                                                </button>
+                                                </div>
+                                                <div class="margs col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                                                <button class="col-lg-12 btn btn-primary btn-rounded-new run-on">
+                                                    Запустить
+                                                </button>
+                                                </div>
+                                                <div class="margs col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                                                <button class="col-lg-12 btn btn-danger btn-rounded-new delete" data-nodrag">
+                                                    Удалить
+                                                </button>
+                                                </div>
+
+                                            </div>
+
+                                             <div class="row">
+                                                <div class="save-lock">Изменения сохранены!</div>
+                                                <div class="save-error">Ошибка! Карта не сохранена!</div>
+                                                <div class="run-lock">Спасибо! Ваши запросы в обработке! Нужно подождать.</div>
+                                              </div>
+
+
+
+  <!-- <div class="col-sm-6">
+    <pre class="code">{{ tree2 | json }}</pre>
+  </div> -->

@@ -19,6 +19,8 @@
     <span class="number-group">{{node.number_group}}</span>
     <a class="button-plus btn btn-primary btn-rounded-new" ng-if="node.id < 11100000000" data-nodrag ng-click="newSubItem(this)">
       <span class="glyphicon glyphicon-plus"></span></a>
+
+    <div class="dropdown" style="display: inline-block;width: 5%;">
     <a class="btn btn-success btn-rounded-new" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)">
       <span class="glyphicon"
         ng-class="{
@@ -26,27 +28,87 @@
           'glyphicon-chevron-down': !collapsed
         }">
         </span>
-      </a>
+      </a> </div>
 
       <input type="hidden" ng-model="node.number_group">
-      <input class="form-control inp input-size" type="text" ng-model="node.name_group" placeholder="Название группы">
-      <input class="form-control inp input-size" type="text" ng-model="node.url_group" placeholder="Ссылка на сайт">
-      <input class="form-control inp input-size" type="text" ng-model="node.keys_group" placeholder="Поисковые запросы">
+      <input class="form-control inp input-size margim-10-lr" type="text" ng-model="node.name_group" placeholder="Название группы" value="Запчасти для пылесосов">
 
-      <div class="block-type-search" style="display: inline-block;">
+      <div class="dropdown" style="display: inline-block;">
+      <a class="showin" style="cursor: pointer;"><i class="fa fa-link"></i></a>
+      <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
+      </div>
+
+      <input class="form-control inp input-size margim-10-lr" type="text" ng-model="node.keys_group" placeholder="Поисковые запросы" value="запчасти для пылесосов, ремонт пылесосов, пылесосы">
+
+      <div class="block-type-search" style="display: inline-block;position: relative;">
       <ul id="pll" class="nav nav-pills" style="display: inline-block;">
                                                                       <li class="btn-rounded-new active">
                                                                           <a class="type-search" data-toggle="pill">
-                                                                              Подобрать
+                                                                              Авт.
                                                                           </a>
                                                                       </li>
+                                                                      <br>
                                                                       <li class="btn-rounded-new">
                                                                           <a class="type-search" data-toggle="pill">
-                                                                              Добавить
+                                                                              Руч.
                                                                           </a>
                                                                       </li>
                                                                   </ul>
                                                                   </div>
+
+      <div class="dropdown" style="display: inline-block;"><a href="keyword_research_v1.html" style="
+    color: #337ab7;
+    font-weight: bold;
+    font-size: 16px;">0 / 20</a></div>
+
+       <div class="dropdown" style="display: inline-block;">
+                                    <a title="12:08 02.09.2016" id="projectsTaskSelector" class="lang-selector dropdown-toggle btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                                      <span class="lang-selected">
+                                        <span class="text-mint">
+                                            <i class="fa fa-area-chart" style="font-size:25px;"></i>
+                                        </span>
+                                        <span class="lang-id"></span>
+                                        <span class="lang-name"></span>
+                                      </span>
+                                    </a>
+
+                                    <ul class="dropdown-menu icon-menu">
+                                        <li class="align-left" title="12:08 02.09.2016">
+                                          <a class="dec-none" target="_blank" href="/ru/get_project_report/6918_5090/www.od.service-market.com.ua">
+                                            <span class="text-info">
+                                              <i class="fa fa-link" style="font-size:20px;"></i> Отчет по ссылке
+                                            </span>
+                                            <span class="lang-id">web1079</span>
+                                          </a>
+                                        </li>
+                                        <li class="align-left" title="12:08 02.09.2016">
+                                          <a class="dec-none" target="_blank" href="/ru/get_project_pdf_report/6918_5090/www.od.service-market.com.ua/0-1">
+                                            <span class="text-danger">
+                                              <i class="fa fa-file-pdf-o" style="font-size:20px;"></i> Отчет в PDF
+                                            </span>
+                                            <span class="lang-id">pdf1079</span>
+                                          </a>
+                                        </li>
+
+                                        <li class="align-left">
+                                        <a class="dec-none" href="#" onclick="resetReportTask(1079);">
+                                          <span class="text-info">
+                                            <i class="fa fa-link" style="font-size:20px;"></i> КП по ссылке
+                                          </span>
+                                          <span class="lang-id">reload1079</span>
+                                        </a>
+                                      </li>
+
+                                      <li class="align-left">
+                                        <a class="dec-none" href="#" onclick="resetReportTask(1079);">
+                                          <span class="text-info">
+                                            <i class="fa fa-file-pdf-o" style="font-size:20px;"></i> КП в PDF
+                                          </span>
+                                          <span class="lang-id">reload1079</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
         
       <a class="pull-right btn btn-danger btn-rounded-new" data-nodrag ng-click="remove(this)">
       <span class="glyphicon glyphicon-remove"></span></a>
@@ -61,7 +123,8 @@
   </ol>
 
 </script>
-                          <div class="row">
+
+    <div class="row">
 
         <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                 <button class="btn btn-success btn-rounded-new" ng-click="expandAll()">Развернуть все</button>
@@ -69,9 +132,8 @@
 
         </div>
 
-        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+      <!--  <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
 
-                                <!-- The fileinput-button span is used to style the file input field as button -->
                                 <span class="btn btn-success fileinput-button btn-rounded-new dz-clickable">
                                     <i class="fa fa-plus"></i>
                                     <span>Загрузить карту сайта EXEL</span>
@@ -90,9 +152,10 @@
                             <div id="dz-previews">
                                 <div id="dz-template" class="pad-top bord-top">
                                     <div class="media">
-                                        <div class="media-body">
+                                        <div class="media-body"> -->
+
                                              <!--This is used as the file preview template-->
-                                            <div class="media-block">
+                                          <!--  <div class="media-block">
                                                 <div class="media-left">
                                                     <img class="dz-img" data-dz-thumbnail>
                                                 </div>
@@ -114,7 +177,8 @@
                                     </div>
                                 </div>
                             </div>
-        </div>  
+        </div>  -->
+
     </div>   
 
     <div class="col-sm-12">
@@ -144,7 +208,7 @@
     <div class="col-sm-12">
     <div ui-tree id="tree2-root" data-clone-enabled="true" data-max-depth="3">
       <ol ui-tree-nodes="" ng-model="tree2">
-        <li ng-repeat="node in tree2" ui-tree-node ng-include="'nodes_renderer2.html'"></li>
+        <li ng-repeat="node in tree2" ui-tree-node ng-include="'nodes_renderer2.html'" data-collapsed="true"></li>
       </ol>
     </div>
     </div>
@@ -152,9 +216,9 @@
                                                 <div class="row">
 
                                                 <div class="margs col-lg-4 col-md-4 col-sm-6 col-xs-8">
-                                                    <button class="col-lg-12 btn btn-default btn-rounded-new">
+                                                    <button class="col-lg-12 btn btn-default btn-rounded-new" ng-click="newItem()">
                                                         <i class="fa fa-plus"></i>
-                                                    Добавить ещё 10 строк</button>
+                                                    Добавить строку</button>
                                                 </div>
 
                                                 </div>
@@ -181,7 +245,8 @@
 
                                              <div class="row">
                                                 <div class="save-lock">Изменения сохранены!</div>
-                                                <div class="run-lock">Просчет запущен!</div>
+                                                <div class="save-error">Ошибка! Карта не сохранена!</div>
+                                                <div class="run-lock">Спасибо! Ваши запросы в обработке! Нужно подождать.</div>
                                               </div>
 
 
