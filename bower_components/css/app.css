@@ -161,6 +161,24 @@ padding: 7px 15px;
     margin: 20px;
 }
 
+.upload-lock {
+    font-size: 11pt;
+    color: rgb(139, 195, 74);
+    font-weight: 700;
+    display: none;
+    float: left;
+    margin: 20px;
+}
+
+.upload-error {
+    color: #ee4a47;
+    font-size: 11pt;
+    font-weight: 700;
+    display: none;
+    float: left;
+    margin: 20px;
+}
+
 .margim-10-lr {
 margin: 0 10px;
 }

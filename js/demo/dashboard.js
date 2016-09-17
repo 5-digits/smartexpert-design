@@ -41,6 +41,11 @@ $(window).on('load', function() {
         $("#tree2-root input:checked").closest(".angular-ui-tree-node").remove();
     });
 
+    $(".upload-on").click(function() {
+        $(".upload-lock").show(300);
+        setTimeout(function(){$(".upload-lock").toggle();}, 10000);
+    });
+
 
     $(".mapping").click(function(){console.log("test");$(".tb_row1-2 td:first-child").css("padding-left","30px")})
     $(".mapping").click(function(){console.log("test");$(".tb_row1-2-3 td:first-child").css("padding-left","60px")})
