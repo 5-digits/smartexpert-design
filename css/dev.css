@@ -10,5 +10,18 @@
    } 
 
 .align-left{ 
-    text-align: left; /* Отменяем подчеркивание у ссылки */
+    text-align: left; 
+   } 
+
+
+.panel-heading .breadcrumb .category{ 
+        font-size: 18px; 
+   } 
+
+.panel-heading .breadcrumb .category a { 
+        color: #333;
+   } 
+
+ .panel-heading .breadcrumb .category span { 
+        color: #000000;
    } 

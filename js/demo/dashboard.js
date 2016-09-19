@@ -25,15 +25,38 @@ $(window).on('load', function() {
 
 
 
-    // clonning button event
-    $(".save-on").click(function() {
-        $(".save-lock").css('display', 'block');
+$(".edit-category").click(function(){
+        event.preventDefault();
+        $(".save-lock").css('display', 'none');
         $(".run-lock").css('display', 'none');
+        $(".dis-enab").removeAttr("disabled");
+     /*       if($(this).hasClass("ion-checkmark-round")){
+            $(this).removeClass("ion-checkmark-round");
+            $(this).addClass("ion-gear-b");
+        }
+        $(".dis-enab").removeAttr("disabled");
+        else{
+            $(this).removeClass("ion-gear-b");
+            $(this).addClass("ion-checkmark-round");
+        } */
+
+   });
+
+$('.save-category').click(function (){
+    $('.dis-enab').attr('disabled',true);
     });
 
+    $(".save-on").click(function() {
+        $(".run-lock").css('display', 'none');
+        $(".save-lock").show(300);
+        setTimeout(function(){$(".save-lock").toggle(100);}, 5000);
+    });
+
+
     $(".run-on").click(function() {
-        $(".run-lock").css('display', 'block');
         $(".save-lock").css('display', 'none');
+        $(".run-lock").show(300);
+        setTimeout(function(){$(".run-lock").toggle(100);}, 5000);
     });
 
     $(".delete").click(function() {
