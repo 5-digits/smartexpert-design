@@ -18,6 +18,19 @@
     font-size:11pt;
     cursor: default;
 }
+.tb_row .blue{
+    color:#2196F3;
+    font-size:11pt;
+    font-weight:600;
+} 
+.tb_row .orange {
+    color:#ff690c;
+    font-size:11pt;
+    font-weight:600;
+} 
+.table i{
+    cursor: pointer;
+}
 .tb_row span:hover{
     color:#086c08;
     font-size: 12pt;
@@ -256,8 +269,13 @@ td p{
 .tb th i{
     cursor: pointer;
 }
-.tb td span{
+.tb td .blue{
     color:#2196F3;
+    font-size:11pt;
+    font-weight:600;
+} 
+.tb td .orange {
+    color:#ff690c;
     font-size:11pt;
     font-weight:600;
 } 

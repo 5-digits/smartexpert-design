@@ -24,6 +24,34 @@ $(document).ready(function() {
 $(window).on('load', function() {
 
 
+// get external link & open window OR copy into buffer
+$(document).on('click', '.btn_external_page', function(){
+
+    var action = $(this).data('action');
+    $(this).parents('tr').find('input.kv-editable-input.form-control').select();
+    var link = $(this).parents('tr').find('input.kv-editable-input.form-control').val();
+    var domainName = $('#page-title').data('domain');
+
+    if(domainName.length < 1 || link.length < 1)
+        return false;
+
+    // make url pretty
+    link = link.replace(/^.*\/\/[^\/]+/, '');
+    $(this).parents('tr').find('input.kv-editable-input.form-control').val(link);
+    if(link[0] != '/')
+        link = '/'+link;
+
+    var fullLink =  domainName+link;
+
+    if(action == 'open')
+        openInNewTab(fullLink)
+    else if(action == 'copy')
+        copyTextToClipboard(fullLink)
+
+    return false;
+})
+
+
 
 $(".edit-category").click(function(){
         event.preventDefault();
@@ -142,6 +170,7 @@ $('.save-category').click(function (){
                 $("#del").addClass("disabled");
             }
     });
+
     $(".check_all").click(function(){
             if($(".check_all").prop('checked')){
                 $(".tb input").prop('checked',true);
@@ -149,6 +178,17 @@ $('.save-category').click(function (){
             }
             else{
                 $(".tb input").prop('checked',false);
+                $("#del").addClass("disabled");
+            }
+    });
+
+    $(".check_all").click(function(){
+            if($(".check_all").prop('checked')){
+                $("input").prop('checked',true);
+                $("#del").removeClass("disabled");
+            }
+            else{
+                $("input").prop('checked',false);
                 $("#del").addClass("disabled");
             }
     });
