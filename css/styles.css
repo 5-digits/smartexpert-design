@@ -314,29 +314,30 @@ td p{
     }
 }
 
-.link-popap {
+.kv-editable-inline.kv-editable-content {
     background-color: #fff;
     min-width: 250px;
-    position : absolute;
-    top: -60px;
+    position: absolute;
+    top: -42px;
     z-index: 999;
+    border: 1px solid #ccc;
+    padding: 3px;
 }
 
-.link-popap:hover, .link-popap:visited, .link-popap:link, .link-popap:active {
-    background-color: #fff;
-}
-
-.link-popap input.form-control.lbl.inpt {
-    margin-top: 5px;
+.form-control.lbl.inpt {
     margin-bottom: 5px;
+    width: 100%;
 }
 
-.link-popap .form-group {
+.dropdown .form-group {
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .kv-editable-close.close {
     font-size: 25px;
+    float: none;
+    margin-left: 5px;
 }
 
 @media only screen and (max-width : 1370px) {
