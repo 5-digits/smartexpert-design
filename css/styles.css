@@ -313,3 +313,35 @@ td p{
         width:90%;
     }
 }
+
+.kv-editable-inline.kv-editable-content {
+    background-color: #fff;
+    min-width: 250px;
+    position: absolute;
+    top: -42px;
+    z-index: 999;
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+
+.form-control.lbl.inpt {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.dropdown .form-group {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.kv-editable-close.close {
+    font-size: 25px;
+    float: none;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width : 1370px) {
+    .tree-node {
+        font-size: 12px;
+    }
+}
