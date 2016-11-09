@@ -195,14 +195,14 @@ $('.save-category').click(function (){
 
             $(".showin").click(function(){
             event.preventDefault();
-                $(this).children('.kv-editable-content').slideDown(400);
+                $(this).children('.kv-editable-content').toggle(400);
                 if($(this).children("i").hasClass("fa-link")) {
                     $(this).children("i").removeClass("fa fa-link");
                     $(this).addClass("link-popap");
                 } else {
                     $(this).removeClass("link-popap");
                     $(this).children("i").addClass("fa fa-link");
-                    $(this).children('.kv-editable-content').slideUp(400);
+                    $(this).children('.kv-editable-content').hide();
                 }
             });
 
