@@ -13,11 +13,11 @@
 
     <div class="pull-left tree-handle"  ui-tree-handle style="
     min-width: 2%;
-"> 
+">
       <span class="glyphicon glyphicon-list"></span>
     </div>
 
-    
+
 
 
 
@@ -68,7 +68,7 @@
     width: 6%;
 ">
                                                                       <b class="warning">
-                                                                          В работе 
+                                                                          В работе
                                                                       </b>
                                                                  </div>
 
@@ -91,10 +91,20 @@
                                                                  </div>
 
                                           <div class="dropdown" style="display: inline-block;width: 3%;">
-      <a class="showin btn btn-xs btn-primary btn-rounded-new" style="cursor: pointer;"><i class="fa fa-link"></i></a>
-      <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: none;">
-      </div>
-      
+
+            <a class="showin btn btn-xs btn-primary btn-rounded-new" style="cursor: pointer;"><i class="fa fa-link"></i> </a>
+            <div class="kv-editable-inline kv-editable-content" style="display: none;">
+              <input value="www.service-market.com.ua/catalog/zapchasti-dlya-puesosov" type="text" class="form-control lbl inpt" style="display: block;">
+              <div class="form-group">
+                  <button type="button" class="btn btn-sm btn-default kv-editable-reset" title="Сбросить"><i class="glyphicon glyphicon-ban-circle"></i></button>
+                  <button type="button" class="btn btn-sm btn-primary kv-editable-submit" title="Применить"><i class="glyphicon glyphicon-save"></i></button><button class="kv-editable-close close" title="Закрыть">×</button>
+              </div>
+            </div>
+
+
+
+                                          </div>
+
 
                                                                  <div style="
     display: inline-block;
@@ -218,7 +228,7 @@
                                   </div>
 
 
-        
+
       <a class="pull-right btn btn-danger btn-rounded-new" data-nodrag="" ng-click="remove(this)">
       <span class="glyphicon glyphicon-remove"></span></a>
 
@@ -285,7 +295,7 @@
                                                                        <input type="date" class="form-control" style="height:50px;">
                                                                   </div>
                                                               </div>
-                                                               
+
                                                            </div>
                                                            <div class="col-md-3 col-lg-2">
                                                                <label for="in4" class="lbl">Исполитель</label>
@@ -295,7 +305,7 @@
                                                                <label for="in3" class="lbl">Размещение</label>
                                                                <select class="form-control" id="in3" style="height:50px;">
                                                                    <option value="">
-                                                                       Размещённые 
+                                                                       Размещённые
                                                                    </option>
                                                                    <option value="">
                                                                        Не размещённые
@@ -303,11 +313,11 @@
                                                                </select>
                                                            </div>
                                                            <div class="col-md-2 col-lg-1">
-                                                               <button class="btn btn-success btn-lg btn-rounded-new" style="margin-top:25px; height:50px; width:50px;font-size:14pt;"> 
+                                                               <button class="btn btn-success btn-lg btn-rounded-new" style="margin-top:25px; height:50px; width:50px;font-size:14pt;">
                                                                <i class="fa fa-search"></i>
                                                            </button>
                                                            </div>
-                                                           
+
                                                         </div>
                                                   </div>
                                               </div>
@@ -318,7 +328,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span>Загрузить карту сайта EXEL</span>
                                 </span>
-                    
+
                                 <div class="btn-group pull-right">
                                     <button id="dz-upload-btn" class="btn btn-primary btn-rounded-new" type="submit" disabled>
                                         <i class="fa fa-upload-cloud"></i> Upload
@@ -327,8 +337,8 @@
                                         <i class="demo-pli-cross"></i>
                                     </button>
                                 </div>
-                    
-                    
+
+
                             <div id="dz-previews">
                                 <div id="dz-template" class="pad-top bord-top">
                                     <div class="media">
@@ -359,7 +369,7 @@
                             </div>
         </div>  -->
 
-    </div>   
+    </div>
 
     <div class="col-sm-12">
         <div class="angular-ui-tree">
@@ -401,7 +411,7 @@
                                                 <button class="col-lg-12 btn btn-danger btn-rounded-new delete" data-nodrag">
                                                     Удалить
                                                 </button>
-                                 
+
                                                 </div>
 
                                             </div>
