@@ -193,18 +193,21 @@ $('.save-category').click(function (){
             }
     });
 
-        $(".showin i:eq(0)").click(function(){
-        event.preventDefault();
-        $(".inpt:eq(0)").toggle(500);
-        if($(this).hasClass("fa fa-close")){
-            $(this).removeClass("fa fa-close");
-            $(this).addClass("fa fa-link");
-        }
-        else{
-            $(this).removeClass("fa fa-link");
-            $(this).addClass("fa fa-close");
-        }
-    });
+            $(".showin").click(function(){
+            event.preventDefault();
+                $(this).children('.kv-editable-content').toggle(300);
+                if($(this).children("i").hasClass("fa-link")) {
+                    $(this).children("i").removeClass("fa fa-link");
+                    $(this).addClass("link-popap");
+                } else {
+                    $(this).children('.kv-editable-content').toggle();
+                    $(this).removeClass("link-popap");
+                    $(this).children("i").addClass("fa fa-link");
+
+                }
+            });
+
+
 
         
 

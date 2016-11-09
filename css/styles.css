@@ -313,3 +313,28 @@ td p{
         width:90%;
     }
 }
+
+.link-popap {
+    background-color: #fff;
+    min-width: 250px;
+    position : absolute;
+    top: -60px;
+    z-index: 999;
+}
+
+.link-popap:hover, .link-popap:visited, .link-popap:link, .link-popap:active {
+    background-color: #fff;
+}
+
+.link-popap input.form-control.lbl.inpt {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.link-popap .form-group {
+    margin-bottom: 5px;
+}
+
+.kv-editable-close.close {
+    font-size: 25px;
+}
