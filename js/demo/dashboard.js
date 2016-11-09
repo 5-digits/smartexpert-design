@@ -192,23 +192,19 @@ $('.save-category').click(function (){
                 $("#del").addClass("disabled");
             }
     });
-
-        $(".showin i:eq(0)").click(function(){
+    /* showin */
+    $(".showin").click(function () {
         event.preventDefault();
-        $(".inpt:eq(0)").toggle(500);
-        if($(this).hasClass("fa fa-close")){
-            $(this).removeClass("fa fa-close");
-            $(this).addClass("fa fa-link");
-        }
-        else{
-            $(this).removeClass("fa fa-link");
-            $(this).addClass("fa fa-close");
-        }
+        $(this).siblings('.kv-editable-content').show("slow");
+        $(this).css("visibility", "hidden");
     });
 
-        
-
-
+    $(".kv-editable-close.close").click(function () {
+        console.log('close');
+        $(this).closest(".kv-editable-content").hide("slow");
+        $('.showin').css("visibility", "visible");
+    });
+    /* end showin */
     
     /*-- для показаскрытия/ инпута на написанных статьях --*/
     $(".showin b:eq(0)").click(function(){
