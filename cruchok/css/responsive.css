@@ -1,0 +1,292 @@
+
+@media only screen and (max-width:2560px){
+    .mob-img-resp{
+        width: 50%;
+    }
+    #us{
+        width: 60%;
+        background-size: contain;
+    }
+    #us-num{
+        width: 30%;
+    }
+    
+    #us-num span{
+        margin-top: 30px;
+    }
+    .concurents{
+        padding: 0px;
+    }
+    .level{
+        margin: 0;
+    }
+    .conc p{
+        margin: 0;
+    }
+    #l,#r,#l_pie,#r_pie{
+        background-position: 50% 50%;
+        background-size: contain;
+    }
+    .cartnumber .number .mob-img-resp, .cartnumber .number{
+        text-align: left;
+        width: 50%;
+    }
+}
+@media only screen and (max-width:1320px){
+    /*#us{
+        width: 284px;
+        background-size: cover;
+    }
+    #us-num{
+        width: auto;
+    }
+    
+    #us-num span{
+        margin-top: -18px;
+    }
+    #l,#r{
+        background-size: contain;
+    }*/
+    #tab-con{
+        min-height: 820px;
+    }
+    .concurents{
+        padding: 50px 0 50px 0;
+    }
+    .level{
+        margin: 0px 50px 10px 50px;
+    }
+    .conc p{
+        margin: 0px 50px 0px 60px
+    }
+}
+@media only screen and (max-width:1200px){
+    .percent-con tr td:first-child{
+        min-width: 210px;
+    }
+    .percent-con tr td:nth-child(2){
+        min-width: 80px;
+    }
+}
+@media only screen and (max-width:1091px){
+    /*.tbl{
+        max-width:100%;
+         overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    .tb{
+        max-width:100%;
+         overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }*/
+    #l,#r{
+        background-size: contain;
+    }
+    .primary-page{
+        height: 1163px;
+        max-height: 1163px;
+    }
+    .primary-page #mob-hide{
+        width: 620px;
+        height: 175px;
+        margin-left: 50px;
+        margin-top: 350px;
+    }
+    .primary-page td{
+        width: 470px;
+        height: 160px;
+        font-size: 30px;
+    }
+    .primary-page p{
+        margin-top:calc(100% - 70px);
+    }
+}
+@media only screen and (max-width:992px){
+    .primary-page{
+        height: 1000px;
+        max-height: 1000px;
+    }
+    .primary-page #mob-hide{
+        width: 600px;
+        height: 160px;
+        margin-left: 60px;
+        margin-top: 250px;
+    }
+    .primary-page td{
+        width: 470px;
+        height: 160px;
+        font-size: 30px;
+    }
+    .primary-page td span{
+        line-height: normal;
+    }
+    .primary-page td:last-child{
+        font-size: 24px;
+    }
+    .primary-page p{
+        margin-top: calc(100% - 70px);
+    }
+    .tbl{
+        overflow:hidden;
+    }
+    /*.tb{
+        max-width:100%;
+         overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }*/s
+    #tab-con{
+        min-height: 820px;
+    }
+}
+@media only screen and (max-width:768px){
+    .primary-page{
+        height: 950px;
+        max-height: 950px;
+    }
+    .primary-page #mob-hide{
+        width: 585px;
+        height: 160px;
+        margin-left: 60px;
+        margin-top: 220px;
+    }
+}
+@media only screen and (max-width:720px){
+    .primary-page #mob-hide{
+        margin-top: 260px;
+        width:560px;
+    }
+}
+@media only screen and (max-width:700px){
+    #us{
+        width: 70%;
+        background-position: 50% 50%;
+        background-size: contain;
+        }
+    .primary-page #mob-hide{
+        margin-top: 260px;
+        width: 540px;
+        }
+    .primary-page #mob-hide{
+        margin-left: 20px;
+        }
+    #us-num span{
+        margin-top: -18px;
+    }
+    .primary-page td:last-child{
+        font-size: 19px;
+    }
+    }
+@media only screen and (max-width:615px){
+    .primary-page{
+        height: 700px;
+        max-height: 700px;
+    }
+    .primary-page td{
+        width: 470px;
+        height: 100px;
+        font-size: 24px;
+    }
+    .primary-page #mob-hide{
+        margin-top: 200px;
+        width: 420px;
+        margin-left: 40px;
+    }
+    .primary-page td:last-child{
+        font-size:16px;
+    }
+    .percent-con tr td:first-child{
+        min-width: 190px;
+    }
+    .percent-con tr td:nth-child(2){
+        min-width: 80px;
+    }
+    .primary-page td span{
+        padding-left: 15px;
+    }
+    /*.tbl{
+        max-width:100%;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }*/
+    .mob-img-resp{
+        width:100%;
+    }
+    .number{
+            width: 100%;
+            text-align: center;
+        }
+        .left-side{
+            display: none;
+        }
+        .right-side{
+            width:100%;
+        }
+        #l,#r,#l_pie,#r_pie{
+            background-position: 50% 50%;
+        }
+        .conc p{
+            text-align: center;
+            width:100%;
+            margin: 5px;
+            font-size: 24px;
+        }
+        .conc p:last-child{
+            font-size: 16px;
+        }
+        #us,.level{
+            display: none;
+        }
+        #tab-con{
+            min-height: 650px;
+        }
+}
+    @media only screen and (max-width:480px){
+        .number{
+            width: 100%;
+            text-align: center;
+        }
+        .left-side{
+            display: none;
+        }
+        .right-side{
+            width:100%;
+        }
+        #l,#r,#l_pie,#r_pie{
+            background-position: 50% 50%;
+        }
+        #mob-hide{
+            display: none;
+        }
+        #mob-vers{
+            display: block;
+        }
+        .primary-page{
+            height: 350px;
+            padding: 10px;
+            background: #eaf3fa;
+            background-image: none;
+        }
+        .conc p{
+            text-align: center;
+            width:100%;
+            margin: 5px;
+            font-size: 24px;
+        }
+        .conc p:last-child{
+            font-size: 16px;
+        }
+        #us,.level{
+            display: none;
+        }
+        #tab-con{
+            min-height: 650px;
+        }
+        #us-num{
+            width: 100%;
+        }
+    }
+@media only screen and (max-width:400px){
+    #tab-con{
+        min-height: 670px;
+    }
+}
